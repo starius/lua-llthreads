@@ -45,7 +45,7 @@ static void luaL_setfuncs (lua_State *L, const luaL_Reg *l, int nup) {
 
 #endif
 
-#if LUA_VERSION_NUM == 502
+#if LUA_VERSION_NUM >= 502
 
 #define lua_load_no_mode(L, reader, data, source) \
 	lua_load(L, reader, data, source, NULL)
@@ -580,7 +580,7 @@ static void obj_type_register_implements(lua_State *L, const reg_impl *impls) {
 #endif
 
 /* For Lua 5.2 don't register modules as globals. */
-#if LUA_VERSION_NUM == 502
+#if LUA_VERSION_NUM >= 502
 #undef REG_MODULES_AS_GLOBALS
 #define REG_MODULES_AS_GLOBALS 0
 #endif
