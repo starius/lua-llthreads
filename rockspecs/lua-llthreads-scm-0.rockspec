@@ -1,7 +1,7 @@
 package = "lua-llthreads"
 version = "scm-0"
 source = {
-	url = "https://github.com/Neopallium/lua-llthreads/archive/master.zip",
+	url = "https://github.com/starius/lua-llthreads/archive/master.zip",
 	dir = "lua-llthreads-master",
 }
 description = {
